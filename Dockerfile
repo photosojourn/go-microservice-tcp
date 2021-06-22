@@ -9,4 +9,4 @@ RUN go build -o /bin/go-microservice-tcp
 FROM golang:1.13-alpine
 COPY --from=build /bin/go-microservice-tcp /bin/go-microservice-tcp
 EXPOSE 8080
-ENTRYPOINT ["/bin/go-microservice-tcp,"8080"]
+ENTRYPOINT ["/bin/go-microservice-tcp","8080"]
